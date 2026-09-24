@@ -1,0 +1,12 @@
+[Unit]
+Description=ProcessPilot Linux Process Supervisor
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/processpilot /etc/processpilot/processpilot.conf
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
